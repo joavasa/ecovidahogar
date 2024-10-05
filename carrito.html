@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html">
+            <img src="imagenes/logo-web.png" id="logo" alt="logo" class="logo" style="width: auto; height: 82px;">
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+               
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" >Inicio</a></li>
+                    <li><a href="productos.html" >Productos</a></li>
+                    <li><a href="servicios.html" >Servicios</a></li>
+                    <li><a href="blog.html" >Blog</a></li>
+                    <li><a href="contactanos.html">Contáctanos</a></li>              
+                </ul>
+            </nav>
+            <a href="carrito.html">
+                <img src="imagenes/carrito.png" id="carrito-icon" alt="carrito" style="width: 70px; height: 70px; cursor: pointer;">
+            </a>
+        </div>
+    </header>
+    <br>
+
+    <!-- FINALIZACIÓN DE LA COMPRA -->
+
+    <div id="checkout-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <form id="checkout-form">
+                <label for="account-number">Número de Cuenta:</label>
+                <input type="text" id="account-number" name="account-number" required>
+                
+                <label for="payment-method">Método de Pago:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Tarjeta de Crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Transferencia Bancaria</option>
+                </select>
+                
+                <div id="credit-card-info" style="display: none;">
+                    <label for="cc-number">Número de Tarjeta:</label>
+                    <input type="text" id="cc-number" name="cc-number">
+                    <label for="cc-expiry">Fecha de Expiración (MM/AA):</label>
+                    <input type="text" id="cc-expiry" name="cc-expiry">
+                    <label for="cc-cvc">CVC:</label>
+                    <input type="text" id="cc-cvc" name="cc-cvc">
+                </div>
+
+                <button type="submit" class="btn-2">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="carrito-completo" class="cart-full container" style="display: none;">
+        <h2>Carrito de Compras</h2>
+        <table id="carrito-lista-completa">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p id="total-precio"></p>
+        <a href="#" class="btn-2" id="checkout-btn">Finalizar Compra</a>
+    </section>
+</body>
+</html>
