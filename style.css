@@ -163,7 +163,7 @@ form button:hover {
 
 .header-img.imagen-normal {
     background-image: url('imagenes/mesa-monton-plantas-verdes-botella-agua_1064589-239579.png');
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #4CAF50;
